@@ -1,21 +1,24 @@
 # Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
+The code in this lab is written in C and has the simple function of blinking a light at 50% duty cycle and any desired rate. To accomplish this, for loops and while loops are used in a way that checks whether the button is pressed or not. If it is, the button will blink at the desired rate.
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
+# The following boards are used in this lab:
 * MSP430G2553
 * MSP430F5529
 * MSP430FR2311
 * MSP430FR5994
 * MSP430FR6989
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise.
+## Dependencies
+The dependencies for this lab is the MSP430.h library that is included when you build a new project in code composer
 
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
+## Outputs:
+The outputs used for this are the LEDs on each board. 
+G2553: P1.0 and P1.3
+5529: P1.0 and P1.1
+5594: P1.0 and P5.6
+2311: P1.0 and P1.1
+6989: P1.0 and P1.1
 
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+## Code Functionality
+* The general code for every board is the same. The differences include pin numbers for the inputs and outputs, and for the FR boards, High impedance mode must be turned off.
+* The board is always checking whether the button is pressed down or not. Onces it sees that it is, the while loop runs and activates the for loops that enable the blinking of the light
