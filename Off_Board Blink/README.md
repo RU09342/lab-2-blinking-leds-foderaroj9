@@ -1,4 +1,4 @@
-# Multiple Blink Off Board
+# Multiple Blink Off Board *** EXTRA WORK IS MULTIPLE LEDS AT DIFFERENT RATES AS OPPOSED TO A SINGLE***
 The code in this lab is written in C and has the simple function of blinking multiple lights at 50% duty cycle and any desired rate. To accomplish this, counters are used to count at certain rates. They can be changed and the LED will blink at the desired rates. The difference this time is that we take the chip off of the G2553 launchpad and wire it up on a breadboard to achieve its functionality.
 
 # The following boards are used in this lab:
